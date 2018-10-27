@@ -28,11 +28,13 @@ public class Engine implements Runnable{
 		this.sceneManager = sceneManager;
 		new Window(size);
 		canvas.addKeyListener(keyboard);
+		canvas.addMouseListener(mouse);
 	}
 	
 	private void tick() {
 		if (keyboard.isDown(KeyEvent.VK_ESCAPE)) System.exit(0);
 		sceneManager.pollInput(keyboard, mouse);
+		mouse.pollInput();
 		sceneManager.tick();
 	}
 	

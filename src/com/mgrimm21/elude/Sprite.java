@@ -26,5 +26,13 @@ public class Sprite {
 	public void render(int x, int y, Graphics g) {
 		g.drawImage(image, x, y, null);
 	}
+	
+	public int getWidth() {
+		return image.getWidth();
+	}
+	
+	public int getHeight() {
+		return image.getHeight();
+	}
 
 }
